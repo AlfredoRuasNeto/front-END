@@ -26,6 +26,7 @@
 
 /* Corpo do HTML */
 body {
+  padding: 50px;
   background-image: var(--background-img);
   background-position: center;
   /* background-repeat: no-repeat; */
@@ -39,6 +40,22 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Noto Sans Zanabazar Square", sans-serif;
+}
+
+main {
+  font-family: "Noto Sans Zanabazar Square", sans-serif;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  max-width: 500px;
+  min-width: 280px;
+
+  background-color: var(--background-color-form);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
 }
 
 /* Título Principal ('Paladar Apurado') */
@@ -63,22 +80,6 @@ p {
   text-align: center;
   margin-top: 20px;
   color: var(--h2-color);
-}
-
-form {
-  background-color: var(--background-color-form);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  max-width: 500px;
-  padding: 40px;
-  border-radius: 20px;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
-  padding: 0 10px;
 }
 
 .in_bu2 {
@@ -119,14 +120,14 @@ form {
   color: var(--h2-color);
 }
 
-form .cada_entrada .entrada:focus ~ label,
-form .cada_entrada .entrada:valid ~ label {
+ .cada_entrada .entrada:focus ~ label,
+main .cada_entrada .entrada:valid ~ label {
   transform: translateY(-24px);
   font-size: 12px;
   /*color: brown;*/
 }
 
-form text[type="submit"] {
+main text[type="submit"] {
   padding: 10px 40px;
   border: 0;
   border-radius: 10px;
@@ -136,11 +137,12 @@ form text[type="submit"] {
 }
 
 .btn {
+  padding-top: 10px;
   width: 100%;
   text-align: center;
 }
 
-form input[type="submit"] {
+main input[type="submit"] {
   padding: 10px 40px;
   border: 0;
   border-radius: 10px;
@@ -150,19 +152,8 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-form input[type="submit"]:hover {
+main input[type="submit"]:hover {
   background-color: var(--hover-color);
-}
-
-#themeSwitcher {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 2rem 2.5rem;
-  width: 1.125rem;
-  background: transparent;
-  border: transparent;
-  cursor: pointer;
 }
 
 .avaliacao {
@@ -181,27 +172,27 @@ form input[type="submit"]:hover {
   font-style: normal;
   font-size: 17px;
   color: var(--h2-color);
+
 }
 .rating-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
 }
 
 .rating-star {
-  position: relative;
+  width: auto;
+  align-items: center;
   display: flex;
-  margin: 10px 0;
+  margin: auto;
   flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .rating-star input {
   position: relative;
   width: 20px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   appearance: none;
   overflow: hidden;
   cursor: pointer;
@@ -209,7 +200,7 @@ form input[type="submit"]:hover {
 
 .rating-star input::before {
   content: "\eeb8";
-  position: absolute;
+  width: auto;
   font-family: boxicons;
   font-size: 34px;
   position: absolute;
@@ -249,7 +240,7 @@ form input[type="submit"]:hover {
   position: absolute;
   right: 0;
   top: 0;
-  margin: 2rem 2.5rem;
+  margin: 0.5rem 1rem;
   width: 1.125rem;
   background: transparent;
   border-radius: 999;
